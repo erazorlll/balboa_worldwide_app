@@ -22,7 +22,7 @@ class MQTTBridge
                          target_temperature].freeze
   private_constant :SIMPLE_PROPERTIES
 
-  def initialize(mqtt_uri, bwa, device_id: "bwa_2", root_topic: "homie")
+  def initialize(mqtt_uri, bwa, device_id: "bwa2", root_topic: "homie")
     Thread.abort_on_exception = true
 
     @homie = MQTT::Homie::Device.new(device_id, "BWA Link 2", mqtt: mqtt_uri, root_topic: root_topic)
